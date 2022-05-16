@@ -1,6 +1,10 @@
 const CLIENT_ID = 'js-test-extension';
 const CLIENT_VERSION = '1.0.0';
 let SHELL_SDK = null;
+
+updateUI = (text)=> {
+    document.querySelectorAll('#info')[0].innerText = text;
+}
 //import ShellSDK  and events list ffrom FMSShell global variable
 const { ShellSdk, SHELL_EVENTS } = FSMShell;
 
@@ -17,6 +21,19 @@ if (!ShellSdk.isInsideShell()) {
         auth: {
             response_type: 'token'
         }
+    });
+
+    SHELL_SDK.on(SHELL_EVENTS.Version1.REQUIRE_CONTEXT, (context) => {
+       const {
+           account,
+           accountId,
+           company,
+           companyId, 
+           user,
+           userId,
+           selectedLocale,
+       } = JSON.parse(context);
+       updateUI(`USER: ${user} - ${account} - ${company}`);
     });
 
 
