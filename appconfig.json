@@ -1,0 +1,7 @@
+{
+    "name": "FT test extension",
+    "provider": "ders639",
+    "description": "FSM test extension based on sap service contract example",
+    "version": "1.0.0",
+    "icon": "https://raw.githubusercontent.com/SAP-samples/fsm-extension-sample/refactor/samples/service-contract/icon.png"
+}
