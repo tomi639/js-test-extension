@@ -11,6 +11,7 @@ const { ShellSdk, SHELL_EVENTS } = FSMShell;
 //display an error message if extension does not run within shell
 if (!ShellSdk.isInsideShell()) {
     console.log('unable to reach shell eventAPI');
+    updateUI('unable to reach shell eventAPI')
 } else {
     // initialize ShellSDK to connect with parent shell library
     SHELL_SDK = ShellSdk.init(parent, '*');
