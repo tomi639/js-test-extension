@@ -35,6 +35,7 @@ if (!ShellSdk.isInsideShell()) {
            selectedLocale,
        } = JSON.parse(context);
        updateUI(`USER: ${user} - ${account} - ${company}`);
+       console.log(`USER: ${user} - ${account} - ${company}`);
     });
 
 
