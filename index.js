@@ -36,6 +36,7 @@ if (!ShellSdk.isInsideShell()) {
        } = JSON.parse(context);
        updateUI(`USER: ${user} - ${account} - ${company}`);
        console.log(`USER: ${user} - ${account} - ${company}`);
+       console.log(context);
     });
 
 
